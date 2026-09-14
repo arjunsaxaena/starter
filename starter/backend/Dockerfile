@@ -17,7 +17,8 @@ RUN apk update && \
 RUN mkdir -p /var/www/app && mkdir /app
 
 COPY Pipfile* /app
-RUN cd /app && pipenv install --system --deploy
+# uwsgi 2.0.21 fails to compile on modern GCC without this flag
+RUN cd /app && CFLAGS="-Wno-error=incompatible-pointer-types" pipenv install --system --deploy
 
 COPY . /app
 
