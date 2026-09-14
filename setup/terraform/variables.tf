@@ -1,5 +1,6 @@
 variable "k8s_version" {
-  default = "1.25"
+  # 1.25 is no longer creatable on EKS; use a currently supported version
+  default = "1.34"
 }
 
 variable "enable_private" {

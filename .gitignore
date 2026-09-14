@@ -6,3 +6,5 @@ node_modules
 credentials
 .pytest_cache
 *.md
+.env
+*.tfstate
