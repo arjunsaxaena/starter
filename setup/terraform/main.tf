@@ -186,7 +186,7 @@ resource "aws_iam_role_policy_attachment" "eks_service" {
 ##################
 # EKS Node Group
 ##################
-# Track latest release for the given k8s version (AL2023 — AL2 AMIs are gone for newer EKS)
+# Track latest release for the given k8s version
 data "aws_ssm_parameter" "eks_ami_release_version" {
   name = "/aws/service/eks/optimized-ami/${aws_eks_cluster.main.version}/amazon-linux-2023/x86_64/standard/recommended/release_version"
 }

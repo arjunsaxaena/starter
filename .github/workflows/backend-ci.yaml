@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       fail_test:
-        description: "Simulate test failure (for rubric proof only)"
+        description: "Force test failure"
         required: false
         type: boolean
         default: false

@@ -1,5 +1,4 @@
 variable "k8s_version" {
-  # 1.25 is no longer creatable on EKS; use a currently supported version
   default = "1.34"
 }
 
